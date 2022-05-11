@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.1
+Version: 3.6
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js') }}">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+<meta charset="utf-8"/>
+<title>Home</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/fullcalendar/fullcalendar.min.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet" type="text/css"/>
+<!-- END PAGE LEVEL PLUGIN STYLES -->
+<!-- BEGIN PAGE STYLES -->
+<link href="{{ url_for('static', filename = 'styles/assets/admin/pages/css/tasks.css') }}" rel="stylesheet" type="text/css"/>
+<!-- END PAGE STYLES -->
+<!-- BEGIN THEME STYLES -->
+<!-- DOC: To use 'rounded corners' style just load 'components-rounded.css' stylesheet instead of 'components.css' in the below style tag -->
+<link href="{{ url_for('static', filename = 'styles/assets/global/css/components-rounded.css') }}" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/global/css/plugins.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/admin/layout4/css/layout.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ url_for('static', filename = 'styles/assets/admin/layout4/css/themes/default.css') }}" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="{{ url_for('static', filename = 'styles/assets/admin/layout4/css/custom.css') }}" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo ppage-sidebar-closed-hide-logo">
+	<!-- BEGIN HEADER -->
+	<div class="page-header navbar navbar-fixed-top">
+	
+		<!-- BEGIN HEADER INNER -->
+		<div class="page-header-inner">
+			<!-- BEGIN LOGO -->
+			<div class="page-logo">
+				<a href="index.html">
+				<img src="{{ url_for('static', filename = 'styles/assets/admin/layout4/img/logo-light.png') }}" alt="logo" class="logo-default"/>
+				</a>
+				<div class="menu-toggler sidebar-toggler">
+					<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+				</div>
+			</div>
+			<!-- END LOGO -->
+			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+			<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+			</a>
+			<!-- END RESPONSIVE MENU TOGGLER -->
+			<!-- BEGIN PAGE ACTIONS -->
+			<!-- DOC: Remove "hide" class to enable the page header actions -->
+			
+			<div class="page-actions">
+				<div class="btn-group">
+					<button type="button" class="btn btn-transparent btn-default btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+					<span class="hidden-sm hidden-xs">Actions&nbsp;</span><i class="fa fa-angle-down"></i>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#">
+							<i class="icon-docs"></i> New Post </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-tag"></i> New Comment </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-share"></i> Share </a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-flag"></i> Comments <span class="badge badge-success">4</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-users"></i> Feedbacks <span class="badge badge-danger">2</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- END PAGE ACTIONS -->
+			<!-- BEGIN PAGE TOP -->
+			<div class="page-top">
+				<h3 id = "current_time" style="display: inline; color: blanchedalmond;"></h3>
+				<!-- BEGIN HEADER SEARCH BOX -->
+				<!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+				<form class="search-form" action="extra_search.html" method="GET">
+					<div class="input-group">
+						<input type="text" class="form-control input-sm" placeholder="Search..." name="query">
+						<span class="input-group-btn">
+						<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+						</span>
+					</div>
+				</form>
+				<!-- END HEADER SEARCH BOX -->
+				<!-- BEGIN TOP NAVIGATION MENU -->
+				<div class="top-menu">
+					<ul class="nav navbar-nav pull-right">
+						<li class="separator hide"></li>
+						<!-- BEGIN NOTIFICATION DROPDOWN -->
+						<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+						<li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="icon-bell"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="external">
+									<h3><span class="bold">12 pending</span> notifications</h3>
+									<a href="extra_profile.html">view all</a>
+								</li>
+								<li>
+									<ul class="dropdown-menu-list scroller" style="height: 250px;" data-handle-color="#637283">
+										<li>
+											<a href="javascript:;">
+											<span class="time">just now</span>
+											<span class="details">
+											<span class="label label-sm label-icon label-success">
+											<i class="fa fa-plus"></i>
+											</span>
+											New user registered. </span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- END NOTIFICATION DROPDOWN -->
+						<li class="separator hide"></li>
+						<!-- BEGIN INBOX DROPDOWN -->
+						<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+						<li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="icon-envelope-open"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="external">
+									<h3>You have <span class="bold">7 New</span> Messages</h3>
+									<a href="page_inbox.html">view all</a>
+								</li>
+								<li>
+									<ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+										<li>
+											<a href="inbox.html?a=view">
+											<span class="photo">
+											<img src="{{ url_for('static', filename = 'styles/assets/admin/layout3/img/avatar2.jpg') }}" class="img-circle" alt="">
+											</span>
+											<span class="subject">
+											<span class="from">
+											Lisa Wong </span>
+											<span class="time">Just Now </span>
+											</span>
+											<span class="message">
+											Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- END INBOX DROPDOWN -->
+						<li class="separator hide"></li>
+						<!-- BEGIN TODO DROPDOWN -->
+						<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+						<li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" id="header_task_bar">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="icon-calendar"></i>
+							</a>
+							<ul class="dropdown-menu extended tasks">
+								<li class="external">
+									<h3>You have <span class="bold">12 pending</span> tasks</h3>
+									<a href="page_todo.html">view all</a>
+								</li>
+								<li>
+									<ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+										<li>
+											<a href="javascript:;">
+											<span class="task">
+											<span class="desc">New release v1.2 </span>
+											<span class="percent">30%</span>
+											</span>
+											<span class="progress">
+											<span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">40% Complete</span></span>
+											</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<!-- END TODO DROPDOWN -->
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+						<li class="dropdown dropdown-user dropdown-dark">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+								<span class="username username-hide-on-mobile">
+								User
+								</span>
+								<!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+								<img alt="" class="img-circle" src="{{ url_for('static', filename = 'styles/assets/admin/layout4/img/avatar9.jpg') }}"/>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-default">
+								<li>
+									<a href="extra_profile.html">
+									<i class="icon-user"></i> My Profile </a>
+								</li>
+								<li>
+									<a href="page_calendar.html">
+									<i class="icon-calendar"></i> My Calendar </a>
+								</li>
+								<li>
+									<a href="inbox.html">
+									<i class="icon-envelope-open"></i> My Inbox <span class="badge badge-danger">
+									3 </span>
+									</a>
+								</li>
+								<li>
+									<a href="page_todo.html">
+									<i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
+									7 </span>
+									</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="extra_lock.html">
+									<i class="icon-lock"></i> Lock Screen </a>
+								</li>
+								<li>
+									<a href="login.html">
+									<i class="icon-key"></i> Log Out </a>
+								</li>
+							</ul>
+						</li>
+						<!-- END USER LOGIN DROPDOWN -->
+					</ul>
+				</div>
+				<!-- END TOP NAVIGATION MENU -->
+			</div>
+			<!-- END PAGE TOP -->
+		</div>
+		<!-- END HEADER INNER -->
+	</div>
+	<!-- END HEADER -->
+	<div class="clearfix"></div>
+	<!-- BEGIN CONTAINER -->
+	<div class="page-container">
+		<!-- BEGIN SIDEBAR -->
+		<div class="page-sidebar-wrapper">
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<div class="page-sidebar navbar-collapse collapse">
+				<!-- BEGIN SIDEBAR MENU -->
+				<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+				<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+				<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+				<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+				<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+				<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu1" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+					<li class="heading">
+						<h3>GENERAL</h3>
+					</li>
+					<li class="active">
+						<a href="index.html">
+						<i class="icon-home"></i>
+						<span class="title">Dashboard</span>
+						</a>
+					</li>
+				</ul>
+				<!-- END SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- END SIDEBAR -->
+		<!-- BEGIN CONTENT -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+
+				<!-- BEGIN PAGE BREADCRUMB -->
+				<ul class="page-breadcrumb breadcrumb hide">
+					<li>
+						<a href="#">Home</a><i class="fa fa-circle"></i>
+					</li>
+					<li class="active">
+						Dashboard
+					</li>
+				</ul>
+				<!-- END PAGE BREADCRUMB -->
+				<!-- BEGIN PAGE CONTENT INNER -->
+				
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<!-- BEGIN PORTLET-->
+						<div class="portlet light ">
+							<div class="portlet-title">
+								<div class="caption caption-md">
+									<i class="icon-bar-chart theme-font-color hide"></i>
+									<span class="caption-subject theme-font-color bold uppercase">CAMERA</span>
+									<span class="caption-helper hide">weekly stats...</span>
+								</div>
+								<div class="actions">
+									<div class="btn-group btn-group-devided">
+										<!-- <label class="btn btn-transparent grey-salsa btn-circle btn-sm active"> -->
+										<button type="radio" name="options"
+										 class="btn btn-primary " 
+										 id="option1">Show Camera</button>
+									</div>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="region_statistics_loading">
+									<img src="{{ url_for('static', filename = 'styles/assets/admin/layout/img/loading.gif') }}" alt="loading"/>
+								</div>
+								<!-- <div class="row list-separated">
+									<div class="col-md-3 col-sm-3 col-xs-6">
+										<div class="font-grey-mint font-sm">
+											Total Sales
+										</div>
+										<div class="uppercase font-hg font-red-flamingo">
+											13,760 <span class="font-lg font-grey-mint">$</span>
+										</div>
+									</div>
+								</div>
+								 -->
+								<img width = "100%"  id = "thisIsVideo"/>
+
+								<!-- <ul class="list-separated list-inline-xs hide">
+									
+									<li class="border">
+										<div class="font-grey-mint font-sm">
+											Revenue
+										</div>
+										<div class="uppercase font-hg theme-font-color">
+											4,760 <span class="font-lg font-grey-mint">$</span>
+										</div>
+									</li>
+									<li class="divider">
+									</li>
+								</ul> -->
+
+							</div>
+						</div>
+						<!-- END PORTLET-->
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<!-- BEGIN PORTLET-->
+						<div class="portlet light ">
+							<div class="portlet-title">
+								<div class="caption caption-md">
+									<i class="icon-bar-chart theme-font-color hide"></i>
+									<span class="caption-subject theme-font-color bold uppercase">Member Activity</span>
+									<span class="caption-helper hide">weekly stats...</span>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div class="row number-stats margin-bottom-30">
+									<div class="col-md-5 col-sm-5 col-xs-5">
+										<div class="stat-right">
+											<div class="stat-number">
+												<div class="title">
+													Max
+												</div>
+												<div class="number" id = "myMax">
+													2460
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4 col-xs-4">
+										<div class="stat-right">
+											<div class="stat-number">
+												<div class="title">
+													Now
+												</div>
+												<div class="number" id = "myNow">
+													719
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ms-2 mt-3">
+										<div class="stat-right ">
+											<div class="stat-number">
+	
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="table-scrollable table-scrollable-borderless">
+									<!-- <table class="table table-hover table-light">
+										<thead>
+											<tr class="uppercase">
+												<th colspan="2">
+													MEMBER
+												</th>
+												<th>
+													Earnings
+												</th>
+												<th>
+													CASES
+												</th>
+												<th>
+													CLOSED
+												</th>
+												<th>
+													RATE
+												</th>
+											</tr>
+										</thead>
+										<tr>
+											<td class="fit">
+												<img class="user-pic" src="{{ url_for('static', filename = 'styles/assets/admin/layout3/img/avatar4.jpg') }}">
+											</td>
+											<td>
+												<a href="javascript:;" class="primary-link">Brain</a>
+											</td>
+											<td>
+												$345
+											</td>
+											<td>
+												45
+											</td>
+											<td>
+												124
+											</td>
+											<td>
+												<span class="bold theme-font-color">80%</span>
+											</td>
+										</tr>
+									</table> -->
+								</div>
+							</div>
+						</div>
+						<!-- END PORTLET-->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<!-- BEGIN REGIONAL STATS PORTLET-->
+						<div class="portlet light ">
+							<div class="portlet-title">
+								<div class="caption caption-md">
+									<i class="icon-bar-chart theme-font-color hide"></i>
+									<span class="caption-subject theme-font-color bold uppercase">Search for date</span>
+									<input type="text" id = "thisIsDate">
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="region_statistics_loading">
+									<img src="{{ url_for('static', filename = 'styles/assets/admin/layout/img/loading.gif') }}" alt="loading"/>
+								</div>
+								<div id="region_statistics_content">
+									
+									<!-- <div class="btn-toolbar margin-bottom-10">
+										<div class="btn-group btn-group-circle" data-toggle="buttons">
+											<a href="" class="btn grey-salsa btn-sm active">
+											Users </a>
+											<a href="" class="btn grey-salsa btn-sm">
+											Orders </a>
+										</div>
+										<div class="btn-group pull-right">
+											<a href="" class="btn btn-circle grey-salsa btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+											Select Region <span class="fa fa-angle-down">
+											</span>
+											</a>
+											<ul class="dropdown-menu pull-right">
+												<li>
+													<a href="javascript:;" id="regional_stat_world">
+													World </a>
+												</li>
+												<li>
+													<a href="javascript:;" id="regional_stat_usa">
+													USA </a>
+												</li>
+												<li>
+													<a href="javascript:;" id="regional_stat_europe">
+													Europe </a>
+												</li>
+												<li>
+													<a href="javascript:;" id="regional_stat_russia">
+													Russia </a>
+												</li>
+												<li>
+													<a href="javascript:;" id="regional_stat_germany">
+													Germany </a>
+												</li>
+											</ul>
+										</div>
+									</div> -->
+									
+									<!-- <p>
+										{% with messages = get_flashed_messages() %}
+										  {% if messages %}
+											<ul>
+											{% for message in messages %}
+											  <li>{{ message }}</li>
+											{% endfor %}
+											</ul>
+										  {% endif %}
+										{% endwith %}
+									</p>
+									{% if filename %}
+									<video autoplay="autoplay" controls="controls" preload="preload" width="100%">
+										<source src="{{ url_for('display_video', filename=filename) }}" type="video/mp4"></source>
+									</video>
+									{% endif %}
+									<br>
+									<br>
+									<form method="post" action="/" enctype="multipart/form-data" style="display: flex;">
+										<input type="file" name="file" autocomplete="off" required>
+										<input type="submit" value="Upload">
+									</form> -->
+
+								</div>
+							</div>
+						</div>
+						<!-- END REGIONAL STATS PORTLET-->
+					</div>
+					<!-- <div class="col-md-6 col-sm-6">
+						<div class="portlet light">
+							<div class="portlet-title tabbable-line">
+								<div class="caption caption-md">
+									<i class="icon-globe theme-font-color hide"></i>
+									<span class="caption-subject theme-font-color bold uppercase">Feeds</span>
+								</div>
+								<ul class="nav nav-tabs">
+									<li class="active">
+										<a href="#tab_1_1" data-toggle="tab">
+										System </a>
+									</li>
+								</ul>
+							</div>
+							<div id="region_statistics_loading">
+								<img src="{{ url_for('static', filename = 'styles/assets/admin/layout/img/loading.gif') }}" alt="loading"/>
+							</div>
+							<div class="portlet-body">
+								<video autoplay="autoplay" controls="controls" preload="preload" width="100%">
+									<source src="{{ url_for('display_video', filename = 'temp.mp4') }}" type="video/mp4"></source>
+								</video>
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<!-- BEGIN PORTLET-->
+						<div class="portlet light tasks-widget">
+							<div class="portlet-title">
+								<div class="caption caption-md">
+									<i class="icon-bar-chart theme-font-color hide"></i>
+									<span class="caption-subject theme-font-color bold uppercase">CHECKING ATTENDENCE</span>
+								</div>
+								<div class="actions" bis_skin_checked="1">
+									<div class="btn-group btn-group-devided" bis_skin_checked="1">
+										<!-- <label class="btn btn-transparent grey-salsa btn-circle btn-sm active"> -->
+										<button type="radio" 
+										class="btn btn-primary"
+										name="options" class="toggle" id="option2">
+											Show Camera
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div id="region_statistics_loading">
+									<img src="{{ url_for('static', filename = 'styles/assets/admin/layout/img/loading.gif') }}" alt="loading"/>
+								</div>
+								<img width = "100%"  id = "thisIsVideo2"/>
+
+								<!-- <div class="task-content">
+									<div class="scroller" style="height: 282px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+										
+										<ul class="task-list">
+											<li>
+												<div class="task-checkbox">
+													<input type="hidden" value="1" name="test"/>
+													<input type="checkbox" class="liChild" value="2" name="test"/>
+												</div>
+												<div class="task-title">
+													<span class="task-title-sp">
+													Present 2013 Year IPO Statistics at Board Meeting </span>
+													<span class="label label-sm label-success">Company</span>
+													<span class="task-bell">
+													<i class="fa fa-bell-o"></i>
+													</span>
+												</div>
+												<div class="task-config">
+													<div class="task-config-btn btn-group">
+														<a class="btn btn-xs default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+														<i class="fa fa-cog"></i><i class="fa fa-angle-down"></i>
+														</a>
+														<ul class="dropdown-menu pull-right">
+															<li>
+																<a href="javascript:;">
+																<i class="fa fa-check"></i> Complete </a>
+															</li>
+															<li>
+																<a href="javascript:;">
+																<i class="fa fa-pencil"></i> Edit </a>
+															</li>
+															<li>
+																<a href="javascript:;">
+																<i class="fa fa-trash-o"></i> Cancel </a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											
+										</ul>
+									</div>
+								</div> -->
+							</div>
+						</div>
+						<!-- END PORTLET-->
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<!-- BEGIN PORTLET-->
+						<div class="portlet light">
+							<div class="portlet-title">
+								<div class="caption caption-md">
+									<i class="icon-bar-chart theme-font-color hide"></i>
+									<span class="caption-subject theme-font-color bold uppercase">Lop 19110ST1</span>
+									<span class="caption-helper">45 Total</span>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div class="scroller" style="height: 305px;" data-always-visible="1" data-rail-visible1="0" data-handle-color="#D7DCE2">
+									<div class="general-item-list"  id = "allStudents">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- END PORTLET-->
+					</div>
+				</div>
+				
+				<!-- END PAGE CONTENT INNER -->
+			</div>
+		</div>
+		<!-- END CONTENT -->
+	</div>
+	<!-- END CONTAINER -->
+	<!-- BEGIN FOOTER -->
+	<!-- END FOOTER -->
+	<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+	<!-- BEGIN CORE PLUGINS -->
+	<!--[if lt IE 9]>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/respond.min.js') }}"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/excanvas.min.js') }}"></script> 
+	<![endif]-->
+	<script src= "{{ url_for('static', filename='js/script.js') }}"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jquery.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jquery-migrate.min.js') }}" type="text/javascript"></script>
+	<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jquery.blockui.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jquery.cokie.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
+	<!-- END CORE PLUGINS -->
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js') }}" type="text/javascript"></script>
+	<!-- IMPORTANT! fullcalendar depends on jquery-ui-1.10.3.custom.min.js for drag & drop support -->
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/morris/morris.min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/morris/raphael-min.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/global/plugins/jquery.sparkline.min.js') }}" type="text/javascript"></script>
+	<!-- END PAGE LEVEL PLUGINS -->
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+	<script src="{{ url_for('static', filename = 'styles/assets/global/scripts/metronic.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/admin/layout4/scripts/layout.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/admin/layout4/scripts/demo.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/admin/pages/scripts/index3.js') }}" type="text/javascript"></script>
+	<script src="{{ url_for('static', filename = 'styles/assets/admin/pages/scripts/tasks.js') }}" type="text/javascript"></script>
+	<!-- END PAGE LEVEL SCRIPTS -->
+	<script>
+		jQuery(document).ready(function() {    
+		   	Metronic.init(); // init metronic core componets
+		   	Layout.init(); // init layout
+		   	Demo.init(); // init demo features 
+		    Index.init(); // init index page
+		 	Tasks.initDashboardWidget(); // init tash dashboard widget  
+		});
+	</script>
+	<!-- END JAVASCRIPTS -->
+	<script>
+		window.onload = function() {
+		var buttonShowcam2 = document.getElementById('option2')
+		var buttonShowcam = document.getElementById('option1')
+		var video = document.getElementById('thisIsVideo')
+		var video2 = document.getElementById('thisIsVideo2')
+		var inputDate = document.getElementById('thisIsDate')
+
+		const linkVideo = "{{ url_for('video') }}"
+		const linkVideo2 = "{{ url_for('video2') }}"
+
+		inputDate.onclick = e => {
+			fetch("http://localhost:3000/attendance").then(function(res){
+				return res.json()
+			}).then(function(data){
+				var date = inputDate.value
+				document.getElementById('region_statistics_content').innerHTML=""
+				data.forEach(e => {
+					if (e.date == date)
+					{
+						e.student_list.forEach(ele => {
+						document.getElementById('region_statistics_content').innerHTML += 
+						`
+							<h3>Name: ${ele.name} <span>     </span></h3>	
+						`
+						})
+					}
+				})
+			})
+		}
+
+		buttonShowcam.onclick = e => {
+			if (!video.hasAttribute('src'))
+				video.setAttribute('src', linkVideo)	
+			else{
+				video.removeAttribute('src')
+			}
+		}
+		buttonShowcam2.onclick = e => {
+			if (!video2.hasAttribute('src'))
+				video2.setAttribute('src', linkVideo2)	
+			else{
+				video2.removeAttribute('src')
+			}
+		}
+
+		buttonShowcam.click()
+		buttonShowcam2.click()
+
+		setInterval(function() {
+			fetch("/api/update-count", {
+				method : "post"
+			}).then(function(res){
+				return res.json()
+			}).then(function(data){
+				document.getElementById("myMax").innerText = data.maxCount
+				document.getElementById("myNow").innerText = data.count
+			})
+		}, 1000)
+
+		var currentdate = new Date();
+		var month = currentdate.getMonth() + 1
+		setInterval(function() {
+			document.getElementById('current_time').innerText = currentdate.getDate() + "/" + month + "/" + currentdate.getFullYear()
+		}, 1000)
+
+		//fetch data
+		var myStudentAPI = 'http://localhost:3000/student'
+		var myClassAPI = 'http://localhost:3000/class'
+		var myAttendAPI = 'http://localhost:3000/attendance'
+		
+		
+		var myData = []
+		setInterval(function() {
+			fetch("/api/get-name", {
+				method : "post"
+			}).then(function(res){
+				return res.json()
+			}).then(function(data){
+				data.forEach(e => {
+					if (!myData.includes(e.name, 0))
+					{
+						myData.push(e.name)
+						document.getElementById('allStudents').innerHTML += `
+						<div class="item" styles: "display: flex">
+							<div class="item-details">
+								<img class="item-pic" src="{{ url_for('static', filename = 'styles/assets/admin/layout3/img/avatar4.jpg') }}">
+								<a href="" class="item-name primary-link">${e.name}</a>
+								</div>
+								<span class="item-status"><span class="badge badge-empty badge-success"></span>Available</span>
+						</div>
+						`
+						var thisDay = currentdate.getDate() + "/" + month + "/" + currentdate.getFullYear()
+						fetch(myAttendAPI + "/" + 2, 
+						{
+							method : 'PUT',
+							headers : {
+								'Content-type' : 'application/json'
+							},
+							body: JSON.stringify({
+								student_list : data,  
+								date : thisDay 
+							})
+						})
+						.then(function (course){
+							return course.json()
+						})
+								}
+							})
+						})
+			// getStudents(renderStudents)
+		}, 1000)
+			
+        
+}
+// Fucntions
+function getStudents(callback) {
+    fetch(myAttendAPI)
+    .then(function(res){
+        return res.json()
+    })
+    .then(callback)
+}
+var currentdate = new Date()
+function renderStudents(data) {
+    var html = ''
+    data.forEach(element => {
+		if ((element.date) == currentdate.getDate() + "/" + month + "/" + currentdate.getFullYear())
+		{
+			element.student_list.forEach(e => {
+			html += `
+			<div class="item" styles: "display: flex">
+				<div class="item-details">
+					<img class="item-pic" src="{{ url_for('static', filename = 'styles/assets/admin/layout3/img/avatar4.jpg') }}">
+					<a href="" class="item-name primary-link">${e.name} - ${e.id}</a>
+					</div>
+					<span class="item-status"><span class="badge badge-empty badge-success"></span>Available</span>
+			</div>
+			`
+			}
+			)
+		}
+    });
+    document.getElementById('allStudents').innerHTML = html
+	}	
+	</script>
+</body>
+<!-- END BODY -->
+</html>
